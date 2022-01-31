@@ -8,6 +8,8 @@ import org.springframework.context.NoSuchMessageException;
 import java.util.Locale;
 
 import static org.assertj.core.api.Assertions.*;
+
+
 @SpringBootTest
 public class MessageSourceTest {
     @Autowired
@@ -15,8 +17,9 @@ public class MessageSourceTest {
     @Test
     void helloMessage() {
         String result = ms.getMessage("hello", null, null);
-        assertThat(result).isEqualTo("hello");
+        assertThat(result).isEqualTo("안녕");
     }
+
 
     @Test
     void notFoundMessageCode() {
